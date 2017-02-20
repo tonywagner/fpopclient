@@ -1,16 +1,21 @@
-fpopclient
-==========
+fpopclient-alerts
+=================
 
-A python based client for accessing [FreedomPop](http://www.freedompop.com/about.htm)'s (undocumented) API. 
-
-Sample command line to illustrate usage can be executed; Allowing freedompop customers to see remaining quota and exact time until next quota reset.
+A Python 2.x based client for accessing [FreedomPop](http://www.freedompop.com/about.htm)'s (undocumented) API, and logging usage and emailing alerts. 
 
 ## Usage
+Install Python 2.x if you haven't already.
+Download ZIP of this repo and extract.
+Edit "fp-alerts.py" in extracted folder, change the account info and email information near the top to your own, and run script as follows in a terminal session (Mac/Linux):
 ```
-$ python api.py yourfreedompop@email.com thepassword
-Data used: 19% (204.00 MB of 1100.00 MB) Time until quota reset: 23 days 19 hours (2013-09-27 20:00:00)
+/usr/bin/python /Users/your-local-username/Downloads/fpopclient-alerts-master/fp-alerts.py
 ```
+Or in the Windows command prompt
+```
+C:\Python27\python.exe C:\Users\my-local-username\Downloads\fpopclient-alerts-master\fp-alerts.py
+```
+Schedule script execution with crontab (Mac/Linux) or Task Scheduler (Windows) at your desired interval.
 
 ## License
-Copyright (c) 2013 Dody Suria Wijaya
+Copyright for portions of project fpopclient are held by Dody Suria Wijaya, 2013 as part of project fpopclient. All other copyright for project fpopclient-alerts are held by Tony Wagner, 2017.
 Licensed under the MIT license.
